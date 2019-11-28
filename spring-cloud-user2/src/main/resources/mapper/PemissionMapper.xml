@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.abugong.cloud.mysql.dao.PemissionDao">
+   <select id="getPemissionList" resultType="com.abugong.cloud.mysql.entity.Pemission">
+      SELECT t_pemission.`pemission`,t_user.`username` 
+		FROM t_pemission,t_role_pemission,t_role,t_user_role,t_user
+		WHERE t_pemission.`id` = t_role_pemission.`pemission_id` AND t_role_pemission.`role_id` = t_role.`id`
+		AND t_role.`id` = t_user_role.`role_id` AND t_user_role.`user_id` = t_user.`id`
+		AND t_user.`id`=#{id}
+   </select>
+</mapper>
