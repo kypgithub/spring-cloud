@@ -1,4 +1,4 @@
-package com.abugong.cloud.mysql.controller;
+package com.abugong.cloud.controller;
 
 import java.io.IOException;
 import java.util.HashMap;

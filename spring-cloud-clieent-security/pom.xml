@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.abugong.cloud</groupId>
-	<artifactId>spring-cloud-client</artifactId>
+	<artifactId>spring-cloud-client2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-cloud-client</name>
+	<name>spring-cloud-client2</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -57,17 +57,6 @@
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
 			<version>1.4.6.RELEASE</version>
 		</dependency>
-
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-			<version>${druid.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus</artifactId>
@@ -89,7 +78,7 @@
 			<artifactId>spring-cloud-bean</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-			<dependency>
+		<dependency>
 			<groupId>com.abugong.cloud</groupId>
 			<artifactId>spring-cloud-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -112,13 +101,15 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
-            <version>${swagger.version}</version>
+			<version>${swagger.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-		    <version>${swagger.version}</version>
+			<version>${swagger.version}</version>
 		</dependency>
+
+
 	</dependencies>
 
 	<dependencyManagement>

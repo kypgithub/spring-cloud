@@ -17,9 +17,15 @@
 
 	<distributionManagement>
 		<repository>
-			<id>nexus_releases</id>
-			<url>http://192.168.0.200:8081/repository/maven-public/</url>
+			<id>nexus-releases</id>
+			<name>domain name</name>
+			<url>http://192.168.0.200:8081/repository/maven-releases/</url>
 		</repository>
+		<snapshotRepository>
+			<id>yzyx-snapshots</id>
+			<name>CRM Snapshot Repository</name>
+			<url>http://192.168.0.200:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
 	</distributionManagement>
 
 
@@ -70,7 +76,7 @@
 		</dependency>
 		<dependency>
 
-			<groupId>redis.clients</groupId>
+	    <groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
 		</dependency>
 
@@ -78,6 +84,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
+		
 	</dependencies>
 
 	<build>
