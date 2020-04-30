@@ -39,7 +39,6 @@ public class CustomZuulFilter extends ZuulFilter {
 		HttpServletRequest request = ctx.getRequest();
 		String token = request.getHeader("token");
 		token = "123456";
-		System.out.println("==============");
 		if ("123456".equals(token)) {
 			ctx.setSendZuulResponse(true);// 对该请求进行路由
 			ctx.setResponseStatusCode(200);

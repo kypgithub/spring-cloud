@@ -117,9 +117,8 @@
 
 	<repositories>
 		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
+			<id>nexus-releases</id>
+			<url>http://192.168.0.200:8081/repository/maven-public/</url>
 		</repository>
 	</repositories>
 

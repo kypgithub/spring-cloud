@@ -38,30 +38,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-        <dependency>
-        	<groupId>mysql</groupId>
-        	<artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
-        <dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-			<version>${druid.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus</artifactId>
-			<version>2.2.0</version>
-		</dependency>		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatisplus-spring-boot-starter</artifactId>
-			<version>${mybatisplus.spring.boot.version}</version>
-		</dependency>
-
+		
 		<dependency>
 			<groupId>com.abugong.cloud</groupId>
 			<artifactId>spring-cloud-api</artifactId>
@@ -72,6 +53,17 @@
 			<artifactId>spring-cloud-bean</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+        	<groupId>mysql</groupId>
+        	<artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
+		
 	</dependencies>
 
 	<dependencyManagement>
@@ -95,4 +87,11 @@
 		</plugins>
 	</build>
 
+
+	<repositories>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://192.168.0.200:8081/repository/maven-public/</url>
+		</repository>
+	</repositories>
 </project>
