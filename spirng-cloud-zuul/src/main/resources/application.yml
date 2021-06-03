@@ -1,0 +1,46 @@
+server:
+  port: 8791
+eureka:
+  client:
+    serviceUrl:      defaultZone: http://admin:123456@localhost:8761/eureka/
+spring:
+  application:    name: spring-cloud-zuul
+    
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.0.200:3306/shiro?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    
+  data:    mongodb:      database: s1
+      host: 192.168.0.200
+      port: 27017
+      username: 
+      password:
+  
+zuul:
+  ignored-services: spring-cloud-product, spring-cloud-client, spring-cloud-user  routes:
+      #(方法1) zuul路由配置 
+    #spring-cloud-client: /client/**
+    #spring-cloud-providert: /providert/**
+   
+    # (方法2) zuul路由配置
+    product:
+      path: /product/**
+      service-id: spring-cloud-product
+      #修改代理前缀默认为 true，false代理前缀默认会从请求路径中移除
+      strip-prefix: false
+    user:
+      path: /user/**
+      service-id: spring-cloud-user
+               #修改代理前缀默认为 true，false代理前缀默认会从请求路径中移除
+      strip-prefix: false
+
+    client:
+      path: /client/**
+      service-id: spring-cloud-client
+              #修改代理前缀默认为 true，false代理前缀默认会从请求路径中移除
+      strip-prefix: false
+ 
+      
