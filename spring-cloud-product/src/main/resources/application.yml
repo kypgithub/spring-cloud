@@ -1,0 +1,60 @@
+server:
+  port: 8772
+eureka:
+  client:
+    serviceUrl:      defaultZone: http://admin:123456@localhost:8761/eureka/
+spring:
+  application:    name: spring-cloud-product
+    
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.0.200:3306/shiro?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    
+  redis:
+    database: 0
+    host: 192.168.0.200
+    port: 6379
+    password: 
+    timeout: 2000
+    
+  data:    mongodb:      database: s1
+      host: 192.168.0.200
+      port: 27017
+      username: 
+      password:
+      
+  rabbitmq:
+    host: 192.168.0.200
+    port: 15672
+    username: guest
+    password: guest
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true
+    virtual-host: /
+    
+  resources:    static-locations: classpath:/static/,classpath:/views/
+
+mybatis-plus:  mapper-locations: classpath:mapper/*.xml
+    
+ 
+# 可选配置
+# 配置producer中操作的Queue和Exchange相关信息的。key是自定义的。为了避免硬编码（代码中可以写死）。
+mq:
+  config:
+    # exchange的命名
+    exchange: hello
+    queue:
+               # 路由键， 是定义某一个路由键。 info级别日志使用的queue的路由键。
+      info:
+        routing:
+         key: log.info.routing.key
+              # 路由键，error级别日志使用的queue的路由键。
+      error: 
+       routing:
+         key: log.error.routing.key
+      
