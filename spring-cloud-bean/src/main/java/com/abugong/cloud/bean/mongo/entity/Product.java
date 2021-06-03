@@ -1,4 +1,4 @@
-package com.abugong.cloud.mongo.entity;
+package com.abugong.cloud.bean.mongo.entity;
 
 import java.io.Serializable;
 

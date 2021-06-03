@@ -1,16 +1,17 @@
-package com.abugong.cloud.mysql.entity;
+package com.abugong.cloud.bean.mysql.entity;
 
 import java.io.Serializable;
+
 import com.baomidou.mybatisplus.annotations.TableName;
 
-@TableName("t_pemission")
-public class Pemission implements Serializable{
+@TableName("t_role")
+public class Role implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private Integer id;
-	private String jurisdiction;
+	private String name;
 	private String pemission;
 	public Integer getId() {
 		return id;
@@ -18,11 +19,11 @@ public class Pemission implements Serializable{
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getJurisdiction() {
-		return jurisdiction;
+	public String getName() {
+		return name;
 	}
-	public void setJurisdiction(String jurisdiction) {
-		this.jurisdiction = jurisdiction;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getPemission() {
 		return pemission;
@@ -30,11 +31,13 @@ public class Pemission implements Serializable{
 	public void setPemission(String pemission) {
 		this.pemission = pemission;
 	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	@Override
 	public String toString() {
-		return "Pemission [id=" + id + ", jurisdiction=" + jurisdiction + ", pemission=" + pemission + "]";
+		return "Role [id=" + id + ", name=" + name + ", pemission=" + pemission + "]";
 	}
-
 
 
 }

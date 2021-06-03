@@ -1,4 +1,4 @@
-package com.abugong.cloud.mysql.entity;
+package com.abugong.cloud.bean.mysql.entity;
 
 import java.io.Serializable;
 import java.util.Date;
