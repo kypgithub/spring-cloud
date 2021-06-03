@@ -1,4 +1,4 @@
-package com.abugong.cloud.configuration;
+package com.abugong.cloud.api.configuration;
 import org.springframework.context.annotation.Bean;
 import feign.Logger;
 

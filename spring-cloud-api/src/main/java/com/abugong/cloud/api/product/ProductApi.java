@@ -1,4 +1,4 @@
-package com.abugong.cloud.product;
+package com.abugong.cloud.api.product;
 
 import java.util.Map;
 
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.abugong.cloud.configuration.FeignLog;
+import com.abugong.cloud.api.configuration.FeignLog;
 import com.abugong.cloud.mongo.entity.Product;
 import com.abugong.cloud.utils.R;
 
