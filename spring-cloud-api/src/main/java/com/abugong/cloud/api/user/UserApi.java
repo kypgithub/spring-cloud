@@ -1,16 +1,15 @@
 package com.abugong.cloud.api.user;
 import java.util.List;
 
+import com.abugong.cloud.bean.mysql.entity.Pemission;
+import com.abugong.cloud.bean.mysql.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.abugong.cloud.api.configuration.FeignLog;
-import com.abugong.cloud.mysql.entity.Pemission;
-import com.abugong.cloud.mysql.entity.User;
 /**
  *  用户服务
  * @author 64691
