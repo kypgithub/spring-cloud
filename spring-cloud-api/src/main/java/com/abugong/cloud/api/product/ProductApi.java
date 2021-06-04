@@ -1,23 +1,18 @@
 package com.abugong.cloud.api.product;
 
-import java.util.Map;
-
+import com.abugong.cloud.api.configuration.FeignLog;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.abugong.cloud.api.configuration.FeignLog;
-import com.abugong.cloud.mongo.entity.Product;
-import com.abugong.cloud.utils.R;
-
 @FeignClient(value="spring-cloud-product", configuration = FeignLog.class)
 public interface ProductApi {
 
 	@PostMapping("/product/add")
 	public R add(@RequestBody Product product);
-    
+
 	@PostMapping("/product/updata")
 	public R updata(@RequestBody Product product);
 	

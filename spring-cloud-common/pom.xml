@@ -11,13 +11,26 @@
 	</parent>
 	<groupId>com.abugong.cloud</groupId>
 	<artifactId>spring-cloud-common</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-RELEASE</version>
 	<name>spring-cloud-common</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Releases</name>
+			<url>http://114.67.235.37:28080/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Snapshot</name>
+			<url>http://114.67.235.37:28080/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 
@@ -50,10 +63,10 @@
 		</plugins>
 	</build>
 
-<!--	<repositories>-->
-<!--		<repository>-->
-<!--			<id>nexus-releases</id>-->
-<!--			<url>http://192.168.0.200:8081/repository/maven-public/</url>-->
-<!--		</repository>-->
-<!--	</repositories>-->
+	<repositories>
+		<repository>
+			<id>maven-public</id>
+			<url>http://114.67.235.37:28080/repository/maven-public/</url>
+		</repository>
+	</repositories>
 </project>

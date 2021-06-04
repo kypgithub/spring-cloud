@@ -23,7 +23,7 @@ public class RedisConfig {
 
 	/**
 	 * 选择redis作为默认缓存工具
-	 * @param redisTemplate
+	 * @param redisConnectionFactory
 	 * @return
 	 */
 
