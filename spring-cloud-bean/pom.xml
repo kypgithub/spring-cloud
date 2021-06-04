@@ -12,8 +12,8 @@
 	<groupId>com.abugong.cloud</groupId>
 	<artifactId>spring-cloud-bean</artifactId>
 	<name>spring-cloud-bean</name>
-	<version>1.0.0.RELEASE</version>
 	<description>Demo project for Spring Boot</description>
+	<version>1.0.0.RELEASE</version>
 
 	<distributionManagement>
 		<repository>
@@ -90,6 +90,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
