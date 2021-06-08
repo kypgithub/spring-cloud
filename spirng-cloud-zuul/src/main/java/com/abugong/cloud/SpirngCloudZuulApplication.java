@@ -5,7 +5,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
-import com.abugong.cloud.utils.zuul.CustomZuulFilter;
+import com.abugong.cloud.zuul.CustomZuulFilter;
 
 @EnableEurekaClient
 @EnableZuulProxy

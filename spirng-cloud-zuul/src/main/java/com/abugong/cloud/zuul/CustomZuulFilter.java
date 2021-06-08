@@ -1,4 +1,4 @@
-package com.abugong.cloud.utils.zuul; 
+package com.abugong.cloud.zuul;
 
 import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;

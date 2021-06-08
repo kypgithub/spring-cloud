@@ -1,4 +1,4 @@
-package com.abugong.cloud.utils.zuul;
+package com.abugong.cloud.zuul;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
